@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+:root {
+    --cor1: #181b24;
+    --cor2: #14161D;
+    --cor3: #484848;
+    --cor4: #222222;
+    --cor5: #22A2F2;
+    --cor6: #fff;
+    --cor7: #000;
+}
+
+#pagina {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 250px 750px calc(100vw - 1000px);
+    grid-template-rows: 95px calc(100% - 95px);
+    grid-template-areas: "header header header" "opcoesAside post usuariosAside";
+    background-color: var(--cor1);
+    padding-bottom: 30px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 250px 750px calc(100vw - 1000px);
+    grid-template-areas: "logo busca nada";
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+    background-color: var(--cor2);
+    padding: 0 40px;
+}
+
+.header img {
+    width: 60px;
+    height: 60px;
+    grid-area: logo;
+    margin-left: 40px;
+}
+
+.header form {
+    grid-area: busca;
+}
+
+
+.busca_procura {
+    position: relative;
+}
+
+.header input {
+    width: 100%;
+    height: 35px;
+    padding: 5px 20px;
+    border-radius: 40px;
+    background: #484848;
+    color: var(--cor6);
+}
+
+.lupa {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lupa img {
+    width: 25px;
+    height: 25px;
+}
+
+.opcoes {
+    padding: 50px 0 0 40px;
+    grid-area: opcoesAside;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.opcoes ul li {
+    margin: 20px 0;
+}
+
+.opcoes ul li img {
+    cursor: pointer;
+}
+
+.messages_recebidas {
+    position: relative;
+}
+
+.quantidade {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--cor5);
+    border-radius: 50%;
+    color: var(--cor6);
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateX(8px);
+    cursor: pointer;
+}
+
+.post {
+    padding-top: 50px;
+    grid-area: post;
+}
+
+.criar_post,
+.item_post {
+    width: 100%;
+    border: 1px solid var(--cor3);
+    border-radius: 10px;
+}
+
+.criar_post {
+    height: 140px;
+    padding: 15px 20px;
+}
+
+.criar_post form {
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: flex-end;
+}
+
+.mensagem {
+    width: 100%;
+    height: 65px;
+    background-color: transparent;
+}
+
+#emojis {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 210px;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 100px 10px 10px 10px;
+    display: none;
+    background-color: var(--cor6);
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+.opcao_emoji {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+
+.botao_post {
+    width: 100px;
+    height: 40px;
+    background-color: var(--cor5);
+    border-radius: 10px;
+    color: var(--cor7);
+    cursor: pointer;
+}
+
+.anexos input {
+    display: none;
+}
+
+.item_post {
+    padding: 50px 125px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.item_post picture {
+    width: 500px;
+}
+
+.post_info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.barra_superior,
+.usuarios li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.informacoes {
+    display: flex;
+}
+
+.informacoes div {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.anexos label,
+#emoji_label {
+    cursor: pointer;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+}
+
+.icone {
+    background-color: var(--cor6);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.adicionar {
+    width: 90px;
+    height: 35px;
+    background-color: var(--cor4);
+    color: var(--cor5);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.nome {
+    margin-left: 10px;
+    color: var(--cor6);
+
+}
+
+.usuarios {
+    padding: 50px calc(100% - 500px) 0 160px;
+    grid-area: usuariosAside;
+}
+
+.usuarios h2 {
+    margin-bottom: 20px;
+    color: var(--cor6);
+}
+
+p {
+    color: var(--cor6);
+    text-align: justify;
+}
+
+@media (max-width: 360px) {
+    #pagina {
+        grid-template-columns: 100%;
+        grid-template-rows: 77px 150px calc(100% - 77px);
+        grid-template-areas: "header" "usuariosAside" "post";
+        padding-bottom: 0px;
+    }
+
+    .header {
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--cor2);
+    }
+
+    .header img {
+        width: 50px;
+        height: 50px;
+        margin: 0;
+    }
+
+    .busca_procura {
+        width: 246px;
+        height: 36px;
+    }
+
+    .lupa img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .usuarios {
+        padding: 5px 10px;
+    }
+
+    .usuarios h2 {
+        margin: 0 10px;
+    }
+
+    .usuarios ul {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+    }
+
+    .usuarios li {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px;
+    }
+
+    ul .usuario {
+        height: 100%;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nome {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .adicionar {
+        display: none;
+    }
+
+    .post {
+        padding: 5px 30px;
+    }
+
+    .criar_post {
+        height: 100px;
+        padding: 10px;
+    }
+
+    .mensagem {
+        height: 35px;
+    }
+
+    .item_post picture,
+    .item_post picture img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .item_post {
+        padding: 30px 48px;
+    }
+
+    .item_post .usuario .icone {
+        width: 30px;
+        height: 30px;
+    }
+
+    .informacoes img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .informacoes div {
+        margin: 2px;
+    }
+
+    .opcoes {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 77px;
+        padding: 5px 20px;
+        background-color: var(--cor2);
+        display: flex;
+        align-items: center;
+    }
+
+    .opcoes ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .opcoes ul li {
+        margin: 0;
+        width: auto;
+        overflow-x: visible;
+    }
+
+}
