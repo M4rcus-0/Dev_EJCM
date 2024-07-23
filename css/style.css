@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --cor1: #181b24;
+    --cor2: #F2F2F2;
+    --cor3: #105F74;
+    --cor4: #fff;
+    --cor5: #000;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#termos_box,
+#condicoes_box {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.30);
+    background-color: var(--cor4);
+    transition: 0.5s;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#termos_box.visivel,
+#condicoes_box.visivel{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+}
+
+#termos_box p,
+#condicoes_box p{
+    margin: 10px 0;
+}
+
+#termos_box button,
+#condicoes_box button{
+    width: 100px;
+    height: 40px;
+    background-color: var(--cor3);
+    color: var(--cor4);
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+#pagina {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor1);
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px 300px;
+}
+
+#pagina.desativa{
+    user-select: none;
+    pointer-events: none;
+    filter: blur(20px);
+}
+
+.cadastro,
+.login {
+    background-color: var(--cor2);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+.cadastro {
+    width: 547px;
+    height: 767px;
+}
+
+.login {
+    width: 547px;
+    height: 591px;
+}
+
+.cadastro h2,
+.login h2 {
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+.label,
+.termos,
+.botao {
+    position: relative;
+    margin: 18px 0;
+}
+
+.label input,
+.botao input {
+    width: 450px;
+    height: 40px;
+    padding: 20px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.label input {
+    background-color: transparent;
+    outline: 1.5px solid var(--cor5);
+}
+
+.label label {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    transform: translate(0, -50%);
+    background-color: var(--cor2);
+    padding: 0px 10px;
+    font-size: 0.75em;
+    border-radius: 2px;
+    pointer-events: none;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.label input:valid,
+.label input:focus {
+    outline: 1.5px solid var(--cor3);
+}
+
+.label input:valid~label,
+.label input:focus~label {
+    color: var(--cor4);
+    background-color: var(--cor3);
+}
+
+.botao input {
+    background-color: var(--cor3);
+    color: var(--cor4);
+    text-align: center;
+    font-size: 1.1em;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.termos input {
+    background-color: var(--cor3);
+}
+
+.termos {
+    text-align: center;
+}
+
+a {
+    text-align: center;
+    color: var(--cor3);
+}
+
+.verificar {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    transform: translate(0, -50%);
+    cursor: pointer;
+}
+
+.esqueceu {
+    text-align: end;
+}
+
+.troca {
+    font-weight: 900;
+    text-align: center;
+}
+
+.troca a {
+    text-decoration: none;
+}
+
+@media (max-width: 360px) {
+
+    #pagina {
+        padding: 10px 0 0 0;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .cadastro,
+    .login {
+        order: 1;
+        width: 298px;
+        padding: 30px 0 0 0;
+    }
+
+    .cadastro {
+        height: 644px;
+    }
+
+    .login {
+        height: 479px;
+    }
+
+    .login h2 {
+        width: 200px;
+        margin-bottom: 40px;
+    }
+
+    .label,
+    .termos,
+    .botao {
+        margin: 10px 0;
+    }
+
+    .label input,
+    .botao input {
+        width: 250px;
+    }
+
+    .termos {
+        width: 240px;
+        font-size: 12px;
+    }
+
+    .botao input {
+        width: 200px;
+        font-size: 14px;
+    }
+
+    .esqueceu {
+        font-size: 0.8em;
+    }
+}
