@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTwitter | Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../img/favicon.ico">
+</head>
+
+<body>
+    <div id="termos_box">
+        <h2>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, dolore dignissimos minima deserunt qui
+            ipsum error quasi hic ratione nesciunt consectetur officiis. Ipsum unde tempore, nemo laudantium nesciunt
+            natus eum?
+            Enim sed necessitatibus quam deleniti laborum at aperiam porro consectetur quidem nam autem dolore eos
+            quaerat odio neque, facilis vel sit nesciunt placeat sequi? Repudiandae, cupiditate. Adipisci qui sequi
+            dicta.
+        </p>
+        <button id="fechar_termos">
+            Sair
+        </button>
+    </div>
+    <div id="condicoes_box">
+        <h2>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, dolore dignissimos minima deserunt qui
+            ipsum error quasi hic ratione nesciunt consectetur officiis. Ipsum unde tempore, nemo laudantium nesciunt
+            natus eum?
+            Enim sed necessitatibus quam deleniti laborum at aperiam porro consectetur quidem nam autem dolore eos
+            quaerat odio neque, facilis vel sit nesciunt placeat sequi? Repudiandae, cupiditate. Adipisci qui sequi
+            dicta.
+        </p>
+        <button id="fechar_condicoes">
+            Sair
+        </button>
+    </div>
+    <div id="pagina">
+        <div class="logo">
+            <picture>
+                <img src="../img/Logo TT.png" alt="logo TTwitter">
+            </picture>
+        </div>
+        <div class="login">
+            <form action="" class="flex">
+                <h2>Bem-vindo ao TTwitter</h2>
+                <div class="label">
+                    <input type="text" id="email_login" name="email_login" placeholder="example@email.com" required>
+                    <label for="email_login">E-mail</label>
+                </div>
+                <div class="label">
+                    <input type="password" id="senha_login" name="senha_login" placeholder="•••••••••" required>
+                    <label for="senha_login">Senha</label>
+                    <span class="verificar flex" id="olho">
+                        <img src="../img/visibility.png" alt="senha visível">
+                    </span>
+                </div>
+                <div class="esqueceu">
+                    <a href="#">Esqueci minha senha</a>
+                </div>
+                <div class="botao">
+                    <input type="button" value="Entrar" id="login">
+                </div>
+                <div class="troca">
+                    <a href="cadastro.html">Registrar</a>
+                </div>
+                <div class="termos">
+                    <input type="checkbox" id="termos_login" name="termos_login" required>
+                    <label for="termos_login"> Li e estou de acordo com os
+                        <a href="#" id="termos">Termos</a> e
+                        <a href="#" id="condicoes">Condições de uso</a>.
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
+    <script src="../js/termos.js"></script>
+</body>
+
+</html>
